@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Monoton&family=Roboto+Slab:wght@100..900&display=swap');
+
+.lake-club-winter-carnuival {
+    background: linear-gradient(rgba(0, 0, 0, 0.473), rgba(255, 255, 255, 0.274)), url(./24783.jpg) no-repeat center/cover;
+    width: 100%;
+    min-height: 100vh;  
+    z-index: 9;
+}
+
+.font-alfa {
+    font-family: Alfa Slab One, "serif"
+}
+
+.font-monoton {
+    font-family: Monoton, "sans-serif"
+}
+
+.font-roboto {
+    font-family: Roboto Slab, "serif"
+}
+
+.heading-text {
+    background: url(./209194.gif);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(1rem, 5vw, 4rem);
+    filter: brightness(2);
+}
+
+.custom-next-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 99;
+}
+
+.custom-prev-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 99;
+}
+
+.swiper-slide {
+    text-align: center;
+
+}
+
+.swiper {
+    padding: 50px 0 100px 0 !important;
+}
+
+.swiper-slide img {
+    height: 500px;
+    width: auto;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent 80%, rgba(0, 0, 0, 0.5));
+    filter: contrast(1.5);
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: gold !important;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none !important;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none !important;
+}
+
+.swiper-slide-prev img {
+    opacity: 0.7;
+}
+
+.swiper-slide-prev a,
+.swiper-slide-next a {
+    pointer-events: none;
+}
+
+.swiper-slide-next img {
+    opacity: 0.7;
+}
+
+.swiper-slide-active {
+    scale: 1.1;
+}
+
+.download-brochure a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(0.8rem, 4vw ,1.5rem);
+    padding: 10px 25px;
+    border: 2px solid gold;
+    box-shadow: 0 0 10px gold;
+    border-radius: 35px;
+}
+
+
+@media(max-width: 600px) {
+    .swiper {
+        transform: translateX(-30px);
+        width: 100vw;
+    }
+
+    .swiper-slide img {
+        height: 400px;
+    }
+
+    .swiper-slide-active {
+        scale: 1.2;
+        transform: translateX(-65px) !important;
+    }
+
+    .custom-prev-button {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        z-index: 99;
+    }
+}
+
+
+/* Add this to your style.css or inside a <style> tag in your HTML head */
+
+.banner1-load-1, .banner1-load-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* initially hidden */
+    transition: opacity 1s ease; /* smooth transition for fade effect */
+    visibility: hidden; /* Ensure they're hidden initially */
+}
+
+.banner1-load-1.visible, .banner1-load-2.visible {
+    opacity: 1; /* Show banner */
+    visibility: visible;
+}
+
+/* Optional: If you want carousel to fade in after the banners */
+.lake-club-winter-carnival .swiper {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.lake-club-winter-carnival .swiper.visible {
+    opacity: 1;
+}
