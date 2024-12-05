@@ -61,24 +61,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // Get the banners and carousel
   const banner1 = document.querySelector('.banner1-load-1');
   const banner2 = document.querySelector('.banner1-load-2');
-  const carousel = document.querySelector('.lake-club-winter-carnuival .swiper');
+  const carousel = document.querySelector('.lake-club-winter-carnuival');
 
   // Function to show and hide banners with timeouts
   function showBanners() {
       // Show banner 1
-      banner1.classList.add('visible');
+      banner1.classList.add('active-banner');
+      
       
       // After 3 seconds, hide banner 1 and show banner 2
       setTimeout(() => {
-          banner1.classList.remove('visible');
-          banner2.classList.add('visible');
+          banner1.classList.remove('active-banner');
+          banner2.classList.add('active-banner');
       }, 3000);
 
       // After 3 more seconds, hide banner 2 and show the carousel
       setTimeout(() => {
-          banner2.classList.remove('visible');
-          carousel.classList.add('visible');
+          banner2.classList.remove('active-banner');
+          carousel.classList.add('active-carousel');
       }, 6000);
+
+     
   }
 
   // Call the function when the page loads

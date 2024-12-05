@@ -5,6 +5,7 @@
     width: 100%;
     min-height: 100vh;  
     z-index: 9;
+    visibility: none;
 }
 
 .font-alfa {
@@ -141,17 +142,12 @@
     visibility: hidden; /* Ensure they're hidden initially */
 }
 
-.banner1-load-1.visible, .banner1-load-2.visible {
+.banner1-load-1.active-banner, .banner1-load-2.active-banner {
     opacity: 1; /* Show banner */
     visibility: visible;
 }
 
-/* Optional: If you want carousel to fade in after the banners */
-.lake-club-winter-carnival .swiper {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
 
-.lake-club-winter-carnival .swiper.visible {
-    opacity: 1;
+.lake-club-winter-carnival.active-carousel {
+    visibility: visible;
 }
