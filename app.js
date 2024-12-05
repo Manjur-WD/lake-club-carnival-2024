@@ -28,10 +28,12 @@ const swiper = new Swiper(".avertising-carousel .swiper", {
   },
 
   // Autoplay settings
-  autoplay: {
-    delay: 3000, // Time between slide transitions in ms
-    disableOnInteraction: false, // Continue autoplay after interaction
-  },
+  // autoplay: {
+  //   delay: 3000, // Time between slide transitions in ms
+  //   disableOnInteraction: false, // Continue autoplay after interaction
+  // },
+
+  autoplay: false,
 
   // Breakpoints for responsiveness
   breakpoints: {
@@ -79,6 +81,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
       setTimeout(() => {
           banner2.classList.remove('active-banner');
           carousel.classList.add('active-carousel');
+           // Start the Swiper autoplay when the carousel is shown
+           swiper.autoplay.start();
       }, 6000);
 
      
